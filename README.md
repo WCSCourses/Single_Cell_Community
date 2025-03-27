@@ -1,2 +1,9 @@
-# Single Cell Community
+# LATAM Single Cell Community
 Repository for the Single Cell Genomics Latin America Community 
+
+![singlecell_rio2023](https://github.com/user-attachments/assets/59a59a8a-f176-4b26-a068-9ed7f96e9769)
+
+
+![singlecell_rio2023_wetlab](https://github.com/user-attachments/assets/4837f624-6e3c-4f8d-bbb7-09c1913bb373)
+
+
