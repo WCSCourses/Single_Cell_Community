@@ -90,4 +90,71 @@
         <ul class="list-disc list-inside space-y-2 text-slate-700">
           <li><span class="font-semibold">Automatic inclusion:</span> Participants of past single-cell courses in Rio, Colombia, and Costa Rica.</li>
           <li><span class="font-semibold">Extended inclusion:</span> Participants of other Latin American courses (e.g., cancer genomics, organoids) who have expressed interest in single-cell.</li>
-          <li><span class
+          <li><span class="font-semibold">Referral system:</span> Each member may nominate one new person per year.</li>
+          <li><span class="font-semibold">Direct application:</span> Researchers from groups that have not previously had a participant in any Wellcome Connecting Science single-cell course may request membership directly; applications will be reviewed on a case-by-case basis.</li>
+        </ul>
+      </section>
+
+      <section class="mt-10 space-y-3">
+        <h2 class="text-2xl font-bold">4. Membership Principles</h2>
+        <ul class="list-disc list-inside space-y-2 text-slate-700">
+          <li>The community prioritizes Latin American participation and leadership, while also welcoming the diaspora and active collaborators.</li>
+          <li>Members are expected to engage actively—for example, by introducing themselves on the learning platform, and optionally giving a short (3-minute) presentation in a webinar or special session.</li>
+        </ul>
+      </section>
+
+      <section class="mt-10 space-y-3">
+        <h2 class="text-2xl font-bold">5. Code of Conduct &amp; Behavior</h2>
+        <ul class="list-disc list-inside space-y-2 text-slate-700">
+          <li>Members are expected to uphold high standards of professional conduct.</li>
+          <li>The community is non-commercial.</li>
+          <li>All members should contribute to maintaining an inclusive, respectful, and collaborative environment.</li>
+          <li>Breaches of conduct may result in suspension or removal from the community.</li>
+        </ul>
+      </section>
+
+      <section class="mt-10 space-y-3">
+        <h2 class="text-2xl font-bold">6. Membership Management</h2>
+        <ul class="list-disc list-inside space-y-2 text-slate-700">
+          <li>The steering group reserves the right to approve, deny, or remove memberships in order to maintain the integrity of the community.</li>
+          <li>Membership carries a cost, so admission should be meaningful and justified.</li>
+          <li>Community size will be monitored to ensure manageability and effective communication.</li>
+        </ul>
+      </section>
+
+      <div class="mt-10 p-4 rounded-2xl border border-sky-100 bg-sky-50">
+        <p class="text-sm text-slate-600">
+          If you’d like to propose changes to these Terms of Reference, open an issue or pull request on the GitHub repository.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-sky-100 bg-white/60 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-600 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> SinCell LATAM • Terms of Reference</p>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="underline hover:text-sky-800">Home</a>
+        <a href="https://github.com/WCSCourses/Single_Cell_Community" target="_blank" rel="noreferrer" class="underline hover:text-sky-800">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const d = new Date();
+    const fmt = d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('updated').textContent = fmt;
+
+    const header = document.querySelector('header');
+    const elevateOnScroll = () => {
+      if (window.scrollY > 10) header.classList.add('elevate');
+      else header.classList.remove('elevate');
+    };
+    document.addEventListener('scroll', elevateOnScroll);
+  </script>
+</body>
+</html>
