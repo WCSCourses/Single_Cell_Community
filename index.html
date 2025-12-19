@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SinCell LATAM • Single-Cell Community</title>
-  <meta name="description" content="SinCell LATAM — a non-commercial network connecting single-cell researchers across Latin America through training, resources, and collaborations." />
+
+  <meta name="description"
+        content="SinCell LATAM — a non-commercial community connecting single-cell researchers across Latin America." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="SinCell LATAM • Single-Cell Community" />
-  <meta property="og:description" content="Connecting single-cell researchers across Latin America — training, resources, collaborations." />
+  <meta property="og:description"
+        content="Connecting single-cell researchers across Latin America through training, resources, and collaboration." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="SinCell.png" />
   <meta property="og:url" content="https://wcscourses.github.io/Single_Cell_Community/" />
@@ -18,17 +21,21 @@
 
   <style>
     html { scroll-behavior: smooth; }
+
     .nav-link { position: relative; }
     .nav-link:after {
       content: "";
       position: absolute;
-      left: 0; bottom: -6px; height: 2px; width: 0;
+      left: 0;
+      bottom: -6px;
+      height: 2px;
+      width: 0;
       background: currentColor;
       transition: width 200ms ease;
     }
-    .nav-link:hover:after, .nav-link.active:after { width: 100%; }
+    .nav-link:hover:after,
+    .nav-link.active:after { width: 100%; }
 
-    /* Smooth sticky header shadow on scroll */
     .elevate {
       box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08),
                   0 4px 6px -2px rgba(0,0,0,0.05);
@@ -37,297 +44,234 @@
 </head>
 
 <body class="bg-sky-50 text-slate-900 antialiased">
-  <!-- Header / Navbar -->
-  <header id="top" class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-sky-100">
-    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#intro" class="font-extrabold text-lg tracking-tight text-slate-900">
-        SinCell <span class="text-sky-700">LATAM</span>
+
+<!-- ================= HEADER ================= -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-sky-100">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="#intro" class="font-extrabold text-lg tracking-tight">
+      SinCell <span class="text-sky-700">LATAM</span>
+    </a>
+
+    <button id="menuBtn"
+            class="md:hidden p-2 rounded-lg border border-sky-200 bg-white"
+            aria-label="Toggle Menu">☰</button>
+
+    <ul id="menu" class="hidden md:flex items-center gap-6">
+      <li><a class="nav-link hover:text-sky-800" href="#about">About</a></li>
+      <li><a class="nav-link hover:text-sky-800" href="#membership">Membership</a></li>
+      <li><a class="nav-link hover:text-sky-800" href="#resources">Resources</a></li>
+      <li><a class="nav-link hover:text-sky-800" href="terms.html">Terms</a></li>
+      <li><a class="nav-link hover:text-sky-800" href="conduct.html">Guidelines</a></li>
+      <li>
+        <a href="https://forms.gle/Ufqwvck7EXBMf5UMA"
+           target="_blank"
+           class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-sky-700 text-white hover:bg-sky-800 transition">
+          Apply ↗
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="intro" class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-sky-200/40 blur-3xl"></div>
+    <div class="absolute -bottom-40 -right-40 h-[28rem] w-[28rem] rounded-full bg-cyan-200/40 blur-3xl"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Single-Cell (SinCell) <span class="text-sky-800">LATAM</span> Community
+      </h1>
+
+      <p class="mt-4 text-lg text-slate-700">
+        A non-commercial network of researchers advancing single-cell biology
+        in Latin America through connection, training, and collaboration.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#membership"
+           class="px-5 py-3 rounded-xl bg-sky-700 text-white hover:bg-sky-800 transition">
+          How to join
+        </a>
+        <a href="#resources"
+           class="px-5 py-3 rounded-xl border border-sky-200 bg-white/70 hover:bg-white transition">
+          Resources
+        </a>
+        <a href="#about"
+           class="px-5 py-3 rounded-xl border border-transparent hover:border-sky-200 transition">
+          Learn more ↓
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-white/80 border border-sky-100 rounded-3xl shadow-sm p-4 md:p-6">
+      <img src="SinCell.png"
+           alt="SinCell LATAM visual header"
+           style="max-width:100%;height:auto;border-radius:20px"
+           loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="scroll-mt-24">
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold">About</h2>
+    <p class="mt-4 text-slate-700 max-w-3xl">
+      SinCell LATAM strengthens single-cell research capacity in Latin America
+      by connecting researchers, sharing opportunities, and enabling collaboration
+      in a trusted and inclusive space.
+    </p>
+
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Connect the region</h3>
+        <p class="mt-2 text-slate-700">Build relationships across labs and countries.</p>
+      </div>
+      <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Share training & resources</h3>
+        <p class="mt-2 text-slate-700">Promote learning and practical support.</p>
+      </div>
+      <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Enable collaboration</h3>
+        <p class="mt-2 text-slate-700">Support initiatives across the region.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MEMBERSHIP ================= -->
+<section id="membership" class="scroll-mt-24">
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold">Membership</h2>
+
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Eligibility</h3>
+        <ul class="mt-3 list-disc list-inside space-y-2 text-slate-700">
+          <li>Researchers based in Latin America</li>
+          <li>Researchers outside LATAM with active collaborations in the region</li>
+          <li>A genuine research interest in single-cell biology</li>
+        </ul>
+      </div>
+
+      <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Pathways</h3>
+        <ul class="mt-3 list-disc list-inside space-y-2 text-slate-700">
+          <li>Automatic inclusion via selected courses</li>
+          <li>Extended inclusion via related LATAM courses</li>
+          <li>Referral by existing members</li>
+          <li>Direct application (case-by-case)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
+      <h3 class="font-semibold text-lg">Participation & conduct</h3>
+      <p class="mt-2 text-slate-700">
+        Members are encouraged to participate actively and help maintain a respectful,
+        inclusive environment.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="conduct.html"
+           class="px-5 py-3 rounded-xl border border-sky-200 bg-white/70 hover:bg-white transition">
+          Read the community guidelines
+        </a>
+        <a href="terms.html"
+           class="px-5 py-3 rounded-xl border border-sky-200 bg-white/70 hover:bg-white transition">
+          Terms of Reference
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESOURCES ================= -->
+<section id="resources" class="scroll-mt-24">
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold">Resources</h2>
+    <p class="mt-4 text-slate-700 max-w-3xl">
+      Community platforms, documents, and learning opportunities.
+    </p>
+
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="terms.html"
+         class="group bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition block">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold text-lg group-hover:text-sky-800">Terms of Reference</h3>
+          <span>↗</span>
+        </div>
+        <p class="mt-2 text-slate-600">Community governance and membership rules</p>
       </a>
 
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-sky-200 bg-white hover:bg-sky-50"
-              aria-label="Toggle Menu">☰</button>
+      <a href="conduct.html"
+         class="group bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition block">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold text-lg group-hover:text-sky-800">Community Guidelines</h3>
+          <span>↗</span>
+        </div>
+        <p class="mt-2 text-slate-600">Code of conduct and expected behavior</p>
+      </a>
 
-      <ul id="menu" class="hidden md:flex items-center gap-6">
-        <li><a class="nav-link hover:text-sky-800" href="#about">About</a></li>
-        <li><a class="nav-link hover:text-sky-800" href="#membership">Membership</a></li>
-        <li><a class="nav-link hover:text-sky-800" href="#conduct">Conduct</a></li>
-        <li><a class="nav-link hover:text-sky-800" href="#resources">Resources</a></li>
-        <li>
-          <!-- Replace with your real Google Form URL if needed -->
-          <a href="https://forms.gle/Ufqwvck7EXBMf5UMA" target="_blank" rel="noreferrer"
-             class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-sky-700 text-white hover:bg-sky-800 transition shadow-sm">
-            Apply to join ↗
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero / Intro -->
-  <section id="intro" class="relative overflow-hidden">
-    <!-- subtle background glow -->
-    <div class="absolute inset-0 -z-10">
-      <div class="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-sky-200/40 blur-3xl"></div>
-      <div class="absolute -bottom-40 -right-40 h-[28rem] w-[28rem] rounded-full bg-cyan-200/40 blur-3xl"></div>
+      <a href="https://forms.gle/Ufqwvck7EXBMf5UMA"
+         target="_blank"
+         class="group bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition block">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold text-lg group-hover:text-sky-800">Apply to join</h3>
+          <span>↗</span>
+        </div>
+        <p class="mt-2 text-slate-600">Request membership in the community</p>
+      </a>
     </div>
+  </div>
+</section>
 
-    <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900">
-          Single-Cell (SinCell) <span class="text-sky-800">LATAM</span> Community
-        </h1>
-
-        <p class="mt-4 text-lg text-slate-700">
-          A non-commercial network of researchers advancing single-cell biology in Latin America through
-          connections, training, shared resources, and collaborations.
-        </p>
-
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#membership"
-             class="px-5 py-3 rounded-xl bg-sky-700 text-white hover:bg-sky-800 transition shadow-sm">
-            How to join
-          </a>
-          <a href="#resources"
-             class="px-5 py-3 rounded-xl border border-sky-200 bg-white/70 hover:bg-white transition">
-            Resources
-          </a>
-          <a href="#about"
-             class="px-5 py-3 rounded-xl border border-transparent hover:border-sky-200 transition">
-            Learn more ↓
-          </a>
-        </div>
-
-        <div class="mt-8 flex items-start gap-3 p-4 rounded-2xl border border-sky-100 bg-white/70">
-          <div class="mt-0.5 h-8 w-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-800 font-bold">i</div>
-          <p class="text-sm text-slate-600">
-            This site is hosted on GitHub Pages. Keep <span class="font-medium">SinCell.png</span> in the same folder as
-            <span class="font-medium">index.html</span> (or update the image path).
-          </p>
-        </div>
-      </div>
-
-      <div class="relative">
-        <div class="bg-white/80 border border-sky-100 rounded-3xl shadow-sm p-4 md:p-6">
-          <img
-            src="SinCell.png"
-            alt="SinCell LATAM visual header"
-            width="1400"
-            height="900"
-            style="max-width:100%;height:auto;border-radius:20px"
-            loading="lazy"
-          />
-        </div>
-      </div>
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-sky-100 bg-white/60 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-600 flex flex-col md:flex-row items-center justify-between gap-4">
+    <p>© <span id="year"></span> SinCell LATAM • Community-led • Non-commercial</p>
+    <div class="flex items-center gap-4">
+      <a href="terms.html" class="underline hover:text-sky-800">Terms</a>
+      <a href="conduct.html" class="underline hover:text-sky-800">Guidelines</a>
+      <a href="https://github.com/WCSCourses/Single_Cell_Community"
+         target="_blank"
+         class="underline hover:text-sky-800">GitHub</a>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- About -->
-  <section id="about" class="scroll-mt-24">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold text-slate-900">About</h2>
-      <p class="mt-4 text-slate-700 max-w-3xl">
-        SinCell LATAM exists to strengthen single-cell research capacity in Latin America by connecting researchers,
-        sharing opportunities, and enabling collaborations in a trusted, inclusive space.
-      </p>
+<!-- ================= SCRIPTS ================= -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
-          <h3 class="font-semibold text-lg text-slate-900">Connect the region</h3>
-          <p class="mt-2 text-slate-700">Build relationships across labs, countries, and disciplines in LATAM.</p>
-        </div>
-        <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
-          <h3 class="font-semibold text-lg text-slate-900">Share training & resources</h3>
-          <p class="mt-2 text-slate-700">Promote learning, methods, and practical support for single-cell work.</p>
-        </div>
-        <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
-          <h3 class="font-semibold text-lg text-slate-900">Enable collaborations</h3>
-          <p class="mt-2 text-slate-700">Support initiatives that expand research capacity across the region.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('menu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
 
-  <!-- Membership -->
-  <section id="membership" class="scroll-mt-24">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <div class="flex items-end justify-between gap-6 flex-wrap">
-        <div>
-          <h2 class="text-3xl font-bold text-slate-900">Membership</h2>
-          <p class="mt-3 text-slate-700 max-w-3xl">
-            We aim to keep the community open and welcoming while maintaining a safe, high-trust space.
-          </p>
-        </div>
+  const header = document.querySelector('header');
+  document.addEventListener('scroll', () => {
+    if (window.scrollY > 10) header.classList.add('elevate');
+    else header.classList.remove('elevate');
+  });
 
-        <a href="https://forms.gle/Ufqwvck7EXBMf5UMA" target="_blank" rel="noreferrer"
-           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-sky-700 text-white hover:bg-sky-800 transition shadow-sm">
-          Apply via form ↗
-        </a>
-      </div>
-
-      <div class="mt-10 grid md:grid-cols-2 gap-6">
-        <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
-          <h3 class="font-semibold text-lg text-slate-900">Eligibility</h3>
-          <ul class="mt-3 list-disc list-inside space-y-2 text-slate-700">
-            <li>Researchers and scientists based in Latin America.</li>
-            <li>Researchers and scientists outside LATAM with active collaborations/initiatives in the region (including diaspora).</li>
-            <li>A genuine research interest in single-cell biology.</li>
-          </ul>
-        </div>
-
-        <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
-          <h3 class="font-semibold text-lg text-slate-900">Pathways to join</h3>
-          <ul class="mt-3 list-disc list-inside space-y-2 text-slate-700">
-            <li><span class="font-medium">Automatic inclusion:</span> past participants of selected single-cell courses.</li>
-            <li><span class="font-medium">Extended inclusion:</span> participants of other relevant LATAM courses who expressed interest in single-cell.</li>
-            <li><span class="font-medium">Referral:</span> each member may nominate one new person per year.</li>
-            <li><span class="font-medium">Direct application:</span> researchers may apply; reviewed case-by-case.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="mt-6 bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
-        <h3 class="font-semibold text-lg text-slate-900">Participation</h3>
-        <p class="mt-2 text-slate-700">
-          Members are encouraged to engage actively—for example by introducing themselves on the community platform,
-          and optionally giving a short presentation in a webinar or special session.
-        </p>
-
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#conduct"
-             class="px-5 py-3 rounded-xl border border-sky-200 bg-white/70 hover:bg-white transition">
-            Read the code of conduct
-          </a>
-          <a href="#resources"
-             class="px-5 py-3 rounded-xl border border-transparent hover:border-sky-200 transition">
-            Explore resources ↓
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Conduct -->
-  <section id="conduct" class="scroll-mt-24">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold text-slate-900">Code of conduct</h2>
-      <p class="mt-4 text-slate-700 max-w-3xl">
-        SinCell LATAM is a non-commercial, inclusive, and respectful space for scientific exchange.
-        Breaches of conduct may result in suspension or removal.
-      </p>
-
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
-          <h3 class="font-semibold text-lg text-slate-900">Professional behaviour</h3>
-          <p class="mt-2 text-slate-700">Be respectful, constructive, and collegial in all community spaces.</p>
-        </div>
-        <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
-          <h3 class="font-semibold text-lg text-slate-900">Non-commercial</h3>
-          <p class="mt-2 text-slate-700">No sales, promotions, or commercial solicitation.</p>
-        </div>
-        <div class="bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm">
-          <h3 class="font-semibold text-lg text-slate-900">Stewardship</h3>
-          <p class="mt-2 text-slate-700">
-            A steering group may approve, deny, or remove memberships to preserve integrity and manageability.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resources -->
-  <section id="resources" class="scroll-mt-24">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold text-slate-900">Resources</h2>
-      <p class="mt-4 text-slate-700 max-w-3xl">
-        Add links to your webinar series, community channels, shared documents, training opportunities, and recommended tools.
-      </p>
-
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a href="#" target="_blank" rel="noreferrer"
-           class="group bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition block">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-lg text-slate-900 group-hover:text-sky-800">Webinar series</h3>
-            <span aria-hidden="true">↗</span>
-          </div>
-          <p class="mt-2 text-slate-600">Add the webinar page link</p>
-        </a>
-
-        <a href="#" target="_blank" rel="noreferrer"
-           class="group bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition block">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-lg text-slate-900 group-hover:text-sky-800">Community platform</h3>
-            <span aria-hidden="true">↗</span>
-          </div>
-          <p class="mt-2 text-slate-600">Add WhatsApp / forum / Slack link</p>
-        </a>
-
-        <a href="#" target="_blank" rel="noreferrer"
-           class="group bg-white/80 border border-sky-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition block">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-lg text-slate-900 group-hover:text-sky-800">Terms of reference</h3>
-            <span aria-hidden="true">↗</span>
-          </div>
-          <p class="mt-2 text-slate-600">Link your public ToR document</p>
-        </a>
-      </div>
-
-      <div class="mt-10 p-6 rounded-3xl border border-sky-100 bg-white/70">
-        <h3 class="font-semibold text-slate-900">Want these cards to be editable without touching HTML?</h3>
-        <p class="mt-2 text-slate-700">
-          Put your links in a small JSON file and load them with JavaScript. If you want, I’ll set that up.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-sky-100 bg-white/60 backdrop-blur">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-600 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© <span id="year"></span> SinCell LATAM • Community-led • Non-commercial</p>
-      <div class="flex items-center gap-4">
-        <a href="#intro" class="underline hover:text-sky-800">Back to top</a>
-        <a href="https://github.com/WCSCourses/Single_Cell_Community" target="_blank" rel="noreferrer" class="underline hover:text-sky-800">
-          GitHub
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile menu toggle
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('menu');
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-
-    // Elevate header on scroll
-    const header = document.querySelector('header');
-    const elevateOnScroll = () => {
-      if (window.scrollY > 10) header.classList.add('elevate');
-      else header.classList.remove('elevate');
-    };
-    document.addEventListener('scroll', elevateOnScroll);
-
-    // Active link highlighting
-    const sectionIds = ['about', 'membership', 'conduct', 'resources'];
-    const opts = { rootMargin: '-30% 0px -60% 0px', threshold: 0 };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        const link = document.querySelector(`a[href="#${id}"]`);
-        if (!link) return;
-        if (entry.isIntersecting) link.classList.add('active', 'text-sky-800');
-        else link.classList.remove('active', 'text-sky-800');
-      });
-    }, opts);
-
-    sectionIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
+  const sections = ['about','membership','resources'];
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const link = document.querySelector(`a[href="#${entry.target.id}"]`);
+      if (!link) return;
+      link.classList.toggle('active', entry.isIntersecting);
     });
-  </script>
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+</script>
+
 </body>
 </html>
