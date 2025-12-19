@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Presentation</title>
-  <meta name="description" content="A clean, single-page scrolling site for presenting a project: introduction, framework, guidance, and implementation tools." />
-  <meta property="og:title" content="Project Presentation" />
-  <meta property="og:description" content="Intro, Framework, Guidance, and Implementation Tools" />
+  <title>SinCell LATAM • Single-Cell Community</title>
+  <meta name="description" content="Single-Cell (SinCell) LATAM Community — a non-commercial network of researchers advancing single-cell biology in Latin America through connections, training, resources, and collaborations." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SinCell LATAM • Single-Cell Community" />
+  <meta property="og:description" content="Connecting single-cell researchers across Latin America — training, resources, collaborations, and inclusive scientific exchange." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://<yourusername>.github.io/<repo>" />
+  <meta property="og:image" content="SinCell.png" />
+  <meta property="og:url" content="https://<yourusername>.github.io/<repo>/" />
+
   <link rel="icon" href="favicon.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     html { scroll-behavior: smooth; }
-    /* Optional: active nav underline animation */
     .nav-link { position: relative; }
     .nav-link:after {
       content: "";
@@ -21,25 +25,29 @@
       left: 0; bottom: -6px; height: 2px; width: 0; background: currentColor; transition: width 200ms ease;
     }
     .nav-link:hover:after, .nav-link.active:after { width: 100%; }
-    /* Smooth sticky header shadow on scroll */
     .elevate { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
   </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800 antialiased">
   <!-- Header / Navbar -->
   <header id="top" class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
     <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#intro" class="font-bold text-lg tracking-tight">PGCF</a>
+      <a href="#intro" class="font-bold text-lg tracking-tight">SinCell LATAM</a>
+
       <button id="menuBtn" class="md:hidden p-2 rounded border border-gray-300" aria-label="Toggle Menu">☰</button>
+
       <ul id="menu" class="hidden md:flex items-center gap-6">
-        <li><a class="nav-link hover:text-blue-700" href="#framework">Framework</a></li>
-        <li><a class="nav-link hover:text-blue-700" href="#guidance">Guidance</a></li>
-        <li><a class="nav-link hover:text-blue-700" href="#tools">Implementation Tools</a></li>
+        <li><a class="nav-link hover:text-blue-700" href="#about">About</a></li>
+        <li><a class="nav-link hover:text-blue-700" href="#membership">Membership</a></li>
+        <li><a class="nav-link hover:text-blue-700" href="#conduct">Conduct</a></li>
+        <li><a class="nav-link hover:text-blue-700" href="#resources">Resources</a></li>
         <li>
-          <a href="https://zenodo.org/" target="_blank" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300 hover:border-blue-600 hover:text-blue-700 transition">Zenodo ↗</a>
-        </li>
-        <li>
-          <a href="https://mycompetencies.streamlit.app/" target="_blank" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition">Try the Framework</a>
+          <!-- Replace with your real Google Form URL -->
+          <a href="https://forms.gle/Ufqwvck7EXBMf5UMA" target="_blank"
+             class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition">
+            Apply to join ↗
+          </a>
         </li>
       </ul>
     </nav>
@@ -47,111 +55,169 @@
 
   <!-- Hero / Intro -->
   <section id="intro" class="relative overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 py-24 md:py-32 grid md:grid-cols-2 gap-10 items-center">
+    <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Single Cell Community</h1>
-        <p class="mt-4 text-lg text-gray-600">A Comprehensive 360° Competency Framework for Pathogen Genomics: Integrating Science, Public Health, and Systems Skills.</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Single-Cell (SinCell) LATAM Community</h1>
+        <p class="mt-4 text-lg text-gray-600">
+          A non-commercial network of researchers and scientists committed to advancing single-cell biology in Latin America—through connections, training, shared resources, and collaborations.
+        </p>
+
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="https://zenodo.org/uploads/16760482?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjdmYTA3OTZlLWM1MjAtNDk3Ny05MzRjLTQ0ZDlkMDFhZDAyNSIsImRhdGEiOnt9LCJyYW5kb20iOiJmYjcyZjE2ZGY2MTg2YzNkZWIyNTg1ZDliM2M2ODZhMyJ9.QaDJ1idS_Tj3ydw1K5p4ESpBnbhTAEzBWFGjmhEaf9VU81u7DiTkE8UQvC1PJif4sxh8Br84G9i1-rLYA9sADA>" target="_blank" class="px-5 py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700">Competencies and KSA database</a>
-          <a href="https://mycompetencies.streamlit.app/" target="_blank" class="px-5 py-3 rounded-xl border border-gray-300 hover:border-gray-500">Try the framework NOW</a>
-          <a href="#framework" class="px-5 py-3 rounded-xl border border-transparent hover:border-gray-300">Explore ↓</a>
+          <a href="#membership" class="px-5 py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700">How to join</a>
+          <a href="#resources" class="px-5 py-3 rounded-xl border border-gray-300 hover:border-gray-500">Resources</a>
+          <a href="#about" class="px-5 py-3 rounded-xl border border-transparent hover:border-gray-300">Learn more ↓</a>
         </div>
+
+        <p class="mt-6 text-sm text-gray-500">
+          Built to support Latin American participation and leadership, while welcoming diaspora and active collaborators.
+        </p>
       </div>
+
       <div class="relative">
-        <div class="aspect-video bg-white rounded-2xl shadow p-6 flex items-center justify-center">
-          <span class="text-gray-400"> <img
-  src="PGCF image.png"
-  alt="Visual header for Wellcome Connecting Science—pathogen genomics"
-  width="600"
-  height="400"
-  style="max-width:100%;height:auto;border-radius:8px"/> </span>
+        <div class="bg-white rounded-2xl shadow p-4 md:p-6">
+          <img
+            src="SinCell.png"
+            alt="SinCell LATAM visual header"
+            width="1200"
+            height="800"
+            style="max-width:100%;height:auto;border-radius:16px"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Framework Section -->
-  <section id="framework" class="scroll-mt-24">
-    <div class="max-w-6xl mx-auto px-4 py-20">
-      <h2 class="text-3xl font-bold">Framework</h2>
-      <p class="mt-4 text-gray-600 max-w-3xl">Describe your conceptual framework. Use bullets for clarity and an optional schematic.</p>
+  <!-- About -->
+  <section id="about" class="scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold">About</h2>
+      <p class="mt-4 text-gray-600 max-w-3xl">
+        SinCell LATAM exists to strengthen single-cell research capacity in Latin America by connecting researchers,
+        sharing opportunities, and enabling collaborations in a trusted, inclusive space. :contentReference[oaicite:1]{index=1}
+      </p>
+
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-semibold text-lg">Principle 1</h3>
-          <p class="mt-2 text-gray-600">Brief explanation of the first pillar.</p>
+          <h3 class="font-semibold text-lg">Connect the region</h3>
+          <p class="mt-2 text-gray-600">Build relationships across labs, countries, and disciplines in LATAM. :contentReference[oaicite:2]{index=2}</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-semibold text-lg">Principle 2</h3>
-          <p class="mt-2 text-gray-600">Brief explanation of the second pillar.</p>
+          <h3 class="font-semibold text-lg">Share training & resources</h3>
+          <p class="mt-2 text-gray-600">Promote learning, methods, and practical support for single-cell work. :contentReference[oaicite:3]{index=3}</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-semibold text-lg">Principle 3</h3>
-          <p class="mt-2 text-gray-600">Brief explanation of the third pillar.</p>
+          <h3 class="font-semibold text-lg">Enable collaborations</h3>
+          <p class="mt-2 text-gray-600">Support initiatives that expand research capacity across the region. :contentReference[oaicite:4]{index=4}</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Guidance Section -->
-  <section id="guidance" class="scroll-mt-24 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-4 py-20">
-      <h2 class="text-3xl font-bold">Guidance</h2>
-      <p class="mt-4 text-gray-600 max-w-3xl">Provide practical recommendations, checklists, and steps users should follow.</p>
-      <div class="mt-8 grid md:grid-cols-2 gap-6">
+  <!-- Membership -->
+  <section id="membership" class="scroll-mt-24 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold">Membership</h2>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-semibold">Checklist</h3>
+          <h3 class="font-semibold text-lg">Eligibility</h3>
           <ul class="mt-3 list-disc list-inside space-y-2 text-gray-700">
-            <li>Do this first</li>
-            <li>Then consider this</li>
-            <li>Validate with these metrics</li>
+            <li>Researchers and scientists based in Latin America. :contentReference[oaicite:5]{index=5}</li>
+            <li>Researchers and scientists outside LATAM with active collaborations/initiatives in the region (including diaspora). :contentReference[oaicite:6]{index=6}</li>
+            <li>A genuine research interest in single-cell biology. :contentReference[oaicite:7]{index=7}</li>
           </ul>
         </div>
+
         <div class="bg-white rounded-2xl p-6 shadow">
-          <h3 class="font-semibold">Best Practices</h3>
-          <ol class="mt-3 list-decimal list-inside space-y-2 text-gray-700">
-            <li>Keep components modular</li>
-            <li>Document assumptions</li>
-            <li>Automate testing where possible</li>
-          </ol>
+          <h3 class="font-semibold text-lg">How membership works</h3>
+          <ul class="mt-3 list-disc list-inside space-y-2 text-gray-700">
+            <li><span class="font-medium">Automatic inclusion:</span> past participants of the Rio, Colombia, and Costa Rica single-cell courses. :contentReference[oaicite:8]{index=8}</li>
+            <li><span class="font-medium">Extended inclusion:</span> participants of other LATAM courses (e.g., cancer genomics, organoids) who expressed interest in single-cell. :contentReference[oaicite:9]{index=9}</li>
+            <li><span class="font-medium">Referral:</span> each member may nominate one new person per year. :contentReference[oaicite:10]{index=10}</li>
+            <li><span class="font-medium">Direct application:</span> researchers from groups without prior Wellcome Connecting Science single-cell course participants may apply; reviewed case-by-case. :contentReference[oaicite:11]{index=11}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-white rounded-2xl p-6 shadow">
+        <h3 class="font-semibold text-lg">Participation expectations</h3>
+        <p class="mt-2 text-gray-600">
+          Members are encouraged to engage actively—for example by introducing themselves on the community platform,
+          and optionally giving a short (3-minute) presentation in a webinar or special session. :contentReference[oaicite:12]{index=12}
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <!-- Replace with your real links -->
+          <a href="https://forms.gle/Ufqwvck7EXBMf5UMA" target="_blank"
+             class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition">
+            Apply via form ↗
+          </a>
+          <a href="#conduct" class="px-5 py-3 rounded-xl border border-gray-300 hover:border-gray-500">Read conduct</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Implementation Tools Section -->
-  <section id="tools" class="scroll-mt-24">
-    <div class="max-w-6xl mx-auto px-4 py-20">
-      <h2 class="text-3xl font-bold">Implementation Tools</h2>
-      <p class="mt-4 text-gray-600 max-w-3xl">Tools and turorials to put the framework and guidance into practice.</p>
+  <!-- Conduct -->
+  <section id="conduct" class="scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold">Code of conduct</h2>
+      <p class="mt-4 text-gray-600 max-w-3xl">
+        SinCell LATAM is a non-commercial, inclusive, and respectful space for scientific exchange.
+        Breaches of conduct may result in suspension or removal. :contentReference[oaicite:13]{index=13}
+      </p>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-semibold text-lg">Professional conduct</h3>
+          <p class="mt-2 text-gray-600">Uphold high standards of professional behaviour. :contentReference[oaicite:14]{index=14}</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-semibold text-lg">Non-commercial</h3>
+          <p class="mt-2 text-gray-600">No sales, promotions, or commercial solicitation. :contentReference[oaicite:15]{index=15}</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow">
+          <h3 class="font-semibold text-lg">Stewardship</h3>
+          <p class="mt-2 text-gray-600">A steering group may approve/deny/remove memberships to maintain integrity and manageability. :contentReference[oaicite:16]{index=16}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section id="resources" class="scroll-mt-24 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold">Resources</h2>
+      <p class="mt-4 text-gray-600 max-w-3xl">
+        Add links to your webinar series, community platforms, shared docs, training opportunities, and recommended tools.
+      </p>
 
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Tool Card -->
+        <!-- Resource Card (edit these) -->
         <a href="#" target="_blank" class="group bg-white rounded-2xl p-6 shadow hover:shadow-lg transition block">
           <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-lg">Assess your competencies</h3>
+            <h3 class="font-semibold text-lg">Webinar series</h3>
             <span aria-hidden="true">↗</span>
           </div>
-          <p class="mt-2 text-gray-600">https://mycompetencies.streamlit.app/</p>
+          <p class="mt-2 text-gray-600">Add the webinar page link</p>
         </a>
-        <!-- Duplicate card examples -->
-        <a href="#" target="_blank" class="group bg-white rounded-2xl p-6 shadow hover:shadow-lg transition block">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-lg">Compare multiple assessments of competencies</h3>
-            <span aria-hidden="true">↗</span>
-          </div>
-          <p class="mt-2 text-gray-600">https://mycompetencies-compare.streamlit.app/</p>
-        </a>
-        <a href="#" target="_blank" class="group bg-white rounded-2xl p-6 shadow hover:shadow-lg transition block">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-lg">How to use video</h3>
-            <span aria-hidden="true">↗</span>
-          </div>
-          <p class="mt-2 text-gray-600">https://www.youtube.com/watch?v=gRlM42GYQgQ&ab_channel=MonicaIAbrudan</p>
-        </a>
-      </div>
 
-      <div class="mt-10">
-        <a href="https://mycompetencies.streamlit.app/" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gray-900 text-white hover:bg-black">Try the Framework ↗</a>
+        <a href="#" target="_blank" class="group bg-white rounded-2xl p-6 shadow hover:shadow-lg transition block">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">Community platform</h3>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <p class="mt-2 text-gray-600">Add WhatsApp / forum / Slack link</p>
+        </a>
+
+        <a href="#" target="_blank" class="group bg-white rounded-2xl p-6 shadow hover:shadow-lg transition block">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">Terms of reference</h3>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <p class="mt-2 text-gray-600">Link your public ToR document</p>
+        </a>
       </div>
     </div>
   </section>
@@ -159,10 +225,10 @@
   <!-- Footer -->
   <footer class="border-t border-gray-200">
     <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-gray-500 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© <span id="year"></span> Wellcome Connecting Science • Licensed under CC BY 4.0</p>
+      <p>© <span id="year"></span> SinCell LATAM • Community-led • Non-commercial</p>
       <div class="flex items-center gap-4">
         <a href="#intro" class="underline">Back to top</a>
-        <a href="https://github.com/WCSCourses/PGCF" target="_blank" class="underline">GitHub</a>
+        <a href="https://github.com/<yourusername>/<repo>" target="_blank" class="underline">GitHub</a>
       </div>
     </div>
   </footer>
@@ -186,7 +252,7 @@
     document.addEventListener('scroll', elevateOnScroll);
 
     // Active link highlighting as sections enter view
-    const sections = ['framework','guidance','tools'];
+    const sections = ['about','membership','conduct','resources'];
     const opts = { rootMargin: '-30% 0px -60% 0px', threshold: 0 };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
