@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community Guidelines • SinCell LATAM</title>
+  <meta name="description" content="SinCell LATAM Community Guidelines and Code of Conduct." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Community Guidelines • SinCell LATAM" />
+  <meta property="og:description" content="SinCell LATAM Community Guidelines and Code of Conduct." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="SinCell.png" />
+  <meta property="og:url" content="https://wcscourses.github.io/Single_Cell_Community/conduct.html" />
+
+  <link rel="icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .elevate {
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08),
+                  0 4px 6px -2px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+
+<body class="bg-sky-50 text-slate-900 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-sky-100">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html#intro" class="font-extrabold text-lg tracking-tight text-slate-900">
+        SinCell <span class="text-sky-700">LATAM</span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="terms.html"
+           class="px-4 py-2 rounded-xl border border-sky-200 bg-white/70 hover:bg-white transition">
+          Terms
+        </a>
+        <a href="index.html"
+           class="px-4 py-2 rounded-xl border border-sky-200 bg-white/70 hover:bg-white transition">
+          Home
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <div class="bg-white/80 border border-sky-100 rounded-3xl shadow-sm p-6 md:p-10">
+      <div class="flex items-start justify-between gap-6 flex-wrap">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-extrabold">SinCell LATAM Community Guidelines</h1>
+          <p class="mt-3 text-slate-600">Last updated: <span id="updated"></span></p>
+        </div>
+
+        <a href="index.html"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-sky-200 bg-white/70 hover:bg-white transition">
+          ← Back to home
+        </a>
+      </div>
+
+      <hr class="my-8 border-sky-100" />
+
+      <!-- Intro -->
+      <section class="space-y-4">
+        <p class="text-slate-700">
+          Our community thrives because we bring together people with different backgrounds, experiences,
+          and perspectives. To keep this a place where everyone feels welcome, we commit to treating each
+          other with respect.
+        </p>
+        <p class="text-slate-700">
+          Everyone should be able to take part in our events and platforms without worrying about
+          discrimination or harassment of any kind—whether based on appearance, gender, identity,
+          orientation, ability, age, race, religion, or origin.
+        </p>
+      </section>
+
+      <!-- How we show up -->
+      <section class="mt-10 space-y-3">
+        <h2 class="text-2xl font-bold">How we show up</h2>
+        <p class="text-slate-700">
+          These behaviors help make the SinCell LATAM community a constructive and supportive space:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-slate-700">
+          <li>Treating each other with courtesy and respect</li>
+          <li>Listening to and valuing different viewpoints and experiences</li>
+          <li>Being upfront about conflicts of interest</li>
+          <li>Accepting constructive feedback with openness</li>
+          <li>Using inclusive and welcoming language</li>
+          <li>Respecting confidentiality when it is requested</li>
+          <li>Honoring people’s personal boundaries</li>
+          <li>Being mindful of power, privilege, and how much space you are taking up</li>
+        </ul>
+      </section>
+
+      <!-- What doesn't belong -->
+      <section class="mt-10 space-y-3">
+        <h2 class="text-2xl font-bold">What doesn’t belong here</h2>
+        <p class="text-slate-700">
+          Certain behaviors harm the community and will not be accepted:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-slate-700">
+          <li>Discrimination</li>
+          <li>Harassment of any kind (including sexual harassment)</li>
+          <li>Violence or threats of violence</li>
+          <li>Disrespectful, demeaning, or intimidating behavior</li>
+        </ul>
+      </section>
+
+      <!-- Enforcement -->
+      <section class="mt-10 space-y-3">
+        <h2 class="text-2xl font-bold">Enforcement</h2>
+        <p class="text-slate-700">
+          Breaches of these guidelines may result in moderation actions, including warnings,
+          temporary suspension, or removal from the community, at the discretion of the steering group.
+        </p>
+      </section>
+
+      <div class="mt-10 p-4 rounded-2xl border border-sky-100 bg-sky-50">
+        <p class="text-sm text-slate-600">
+          These guidelines exist to protect the community and support open, respectful scientific exchange.
+          If you have concerns, please contact the community organizers.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-sky-100 bg-white/60 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-600 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> SinCell LATAM • Community Guidelines</p>
+      <div class="flex items-center gap-4">
+        <a href="terms.html" class="underline hover:text-sky-800">Terms of Reference</a>
+        <a href="https://github.com/WCSCourses/Single_Cell_Community" target="_blank" rel="noreferrer"
+           class="underline hover:text-sky-800">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const
