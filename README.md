@@ -1,5 +1,7 @@
 # LATAM Single-Cell Genomics Community 
-Repository for the Single Cell Genomics Latin America Community. 🧬🔬💻
+
+Website: https://wcscourses.github.io/Single_Cell_Community/
+
 
 <img src="https://github.com/user-attachments/assets/59a59a8a-f176-4b26-a068-9ed7f96e9769" width="65%" alt="singlecell_rio2023">
 
